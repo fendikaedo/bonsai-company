@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonsai</title>
+    <title>Company Profile - Bonsai</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -22,16 +22,24 @@
     <header>
         <nav class="nav-container">
             <div class="brand-logo">
-                <img src="assets/img/logo-bonsai.jpg" alt="">
-                <!-- <span>Bonsai Company</span> -->
+                <img src="assets/img/Logo.svg" alt="">
+                <span>Bonsai Company</span>
             </div>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Product</li>
-                <li>Gallery</li>
-                <li>Contact Us</li>
-            </ul>
+            <div class="btn-toggle">
+                <i class="fa-solid fa-bars" id="navBtn"></i>
+            </div>
+            <div id="nav-list" class="nav-list hidden">
+                <ul>
+                    <li id="home" class="nav-links">Home</li>
+                    <li id="about" class="nav-links">About</li>
+                    <li id="product" class="nav-links">Product</li>
+                    <li id="gallery" class="nav-links">Gallery</li>
+                    <li id="blog" class="nav-links">Blog</li>
+                    <li id="testimonials" class="nav-links">Testimonials</li>
+                    <li id="faq" class="nav-links">FAQ</li>
+                    <li id="contact" class="nav-links">Contact</li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -39,11 +47,17 @@
         <section class="home">
             <div class="hero">
                 <div class="content-hero">
-                    <div class="title">Welcome to Bonsai Company</div>
-                    <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat exercitationem
-                        consequuntur sunt eligendi fugit aliquid accusamus quam quia quibusdam nisi.</div>
+                    <div class="welcome">Welcome to my website</div>
+                    <div class="title">Bonsai Company</div>
+                    <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, laborum.</div>
                     <button>
-                        <span>Get Started</span>
+                        <span class="text">Get Started</span>
+                        <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                            </svg>
+                        </span>
                     </button>
                 </div>
             </div>
@@ -226,6 +240,15 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                     </svg>
                 </div>
+                <div class="product-pagination">
+                    <ul>
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section class="gallery">
@@ -236,10 +259,10 @@
             <div class="gallery-content">
                 <div class="filter-gallery">
                     <ul>
-                        <li class="active">All</li>
-                        <li>Bougenville</li>
-                        <li>Adenium</li>
-                        <li>Azalea</li>
+                        <li class="filter-item active">All</li>
+                        <li class="filter-item">Bougenville</li>
+                        <li class="filter-item">Adenium</li>
+                        <li class="filter-item">Azalea</li>
                     </ul>
                 </div>
                 <div class="gallery-list">
@@ -398,16 +421,11 @@
             <div class="blog-content">
                 <div class="blog-list">
                     <ul>
-                        <li class="active">Langkah 1 <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                            </svg>
-                        </li>
-                        <li>Langkah 2</li>
-                        <li>Langkah 3</li>
-                        <li>Langkah 4</li>
-                        <li>Langkah 5</li>
+                        <li class="blog-item active">Langkah 1</li>
+                        <li class="blog-item">Langkah 2</li>
+                        <li class="blog-item">Langkah 3</li>
+                        <li class="blog-item">Langkah 4</li>
+                        <li class="blog-item">Langkah 5</li>
                     </ul>
                 </div>
                 <div class="blog-desc">
@@ -444,9 +462,8 @@
                         <i class="fa-solid fa-star"></i>
                     </div>
                     <div class="desc">
-                        <p>" Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima dolor placeat laudantium
-                            modi nam sunt quia architecto eaque aliquam non quaerat nostrum similique, vitae aut nobis
-                            sapiente odio excepturi aperiam! "</p>
+                        <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, animi accusantium!
+                            Id et, voluptates officiis deleniti tempore deserunt inventore reiciendis? "</p>
                     </div>
                 </div>
                 <div class="testimonials-slide">
@@ -473,10 +490,13 @@
                     <div class="faq-item">
                         <div class="question">
                             <span>Do you provide bonsai delivery service?</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                            </svg>
+                            <div class="faq-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6 active">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
                         </div>
                         <div class="answer active">Yes, we offer shipping with customized packaging to ensure the bonsai
                             arrives safely.</div>
@@ -484,10 +504,13 @@
                     <div class="faq-item">
                         <div class="question">
                             <span>Can I get a consultation on bonsai care?</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                            </svg>
+                            <div class="faq-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
                         </div>
                         <div class="answer">Of course! We provide a free consultation service to help you take care of
                             your bonsai.</div>
@@ -495,10 +518,13 @@
                     <div class="faq-item">
                         <div class="question">
                             <span>How to order bonsai?</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                            </svg>
+                            <div class="faq-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
                         </div>
                         <div class="answer">You can order through our website, WhatsApp, or come directly to our store.
                         </div>
@@ -506,10 +532,13 @@
                     <div class="faq-item">
                         <div class="question">
                             <span>I want to give a bonsai as a gift, is there a special wrapping service?</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                            </svg>
+                            <div class="faq-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
                         </div>
                         <div class="answer">Yes, we provide a special wrapping service for bonsai that will be used as
                             gifts.</div>
@@ -517,10 +546,13 @@
                     <div class="faq-item">
                         <div class="question">
                             <span>Do you accept custom bonsai orders?</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                            </svg>
+                            <div class="faq-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
                         </div>
                         <div class="answer">Yes, we do accept custom bonsai orders, including tree species, size, and
                             bonsai style.</div>
@@ -537,20 +569,43 @@
                 <div class="contact-info">
                     <div class="email">
                         <span>Email</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                        </svg>
                         <p>email.company@gmail.com</p>
                     </div>
                     <div class="no-telp">
                         <span>No Telp</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                        </svg>
+
                         <p>+62xxxxx</p>
                     </div>
                     <div class="address">
                         <span>Address</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                        </svg>
                         <p>123 Elm Street
                             Springfield, IL 62701
                             United States</p>
                     </div>
                     <div class="map">
                         <span>Map</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
+                        </svg>
                         <div class="api-map"></div>
                     </div>
                 </div>
@@ -570,7 +625,7 @@
                         </div>
                         <div class="form-item">
                             <label for="message">Message</label>
-                            <input type="text">
+                            <input type="text" class="message">
                         </div>
                         <div class="btn-form">
                             <button type="submit">
@@ -679,6 +734,8 @@
             <p>Design by <a href="">Codinata</a> Distributed by <a href="">Personal</a></p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
